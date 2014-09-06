@@ -16,6 +16,31 @@
          android:fitsSystemWindows.
     -->
 
-    
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <TextView
+            android:id="@+id/txtMainScreenTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="26dp"
+            android:text="@string/app_name"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#000000"
+            android:textSize="60sp" />
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@+id/txtMainScreenTitle"
+            android:layout_below="@+id/txtMainScreenTitle"
+            android:layout_marginTop="14dp"
+            android:src="@drawable/main_screen" />
+
+    </RelativeLayout>
 
 </FrameLayout>
