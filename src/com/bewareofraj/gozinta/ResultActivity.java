@@ -1,5 +1,7 @@
 package com.bewareofraj.gozinta;
 
+import java.text.DecimalFormat;
+
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -35,16 +37,35 @@ public class ResultActivity extends Activity {
 		
 		Intent intent = getIntent();
 		getValuesFromBundle(intent);
+		
+		initializeGUI();
 		setTextViewValues();
 		
 	}
 
+	private void initializeGUI() {
+		txtBillTotal = (TextView) findViewById(R.id.txtBillTotal);
+		txtTipAmount = (TextView) findViewById(R.id.txtTipAmount);
+		lblTipAmount = (TextView) findViewById(R.id.lblTipAmount);
+		txtFinalTotal = (TextView) findViewById(R.id.txtFinalTotal);
+		lblCostPerPerson = (TextView) findViewById(R.id.lblCostPerPerson);
+		txtCostPerPerson = (TextView) findViewById(R.id.txtCostPerPerson);
+	}
+
 	private void setTextViewValues() {
+		DecimalFormat money = new DecimalFormat("$###.00");
+		DecimalFormat percentage = new DecimalFormat("###%");
 		
+		txtBillTotal.setText(money.format(totalBill));
+		txtTipAmount.setText(money.format(tipAmount));
+		lblTipAmount.setText("Tip Amount (" + percentage.format(tipPercentage) + ")");
+		txtFinalTotal.setText("Final total: " + money.format(finalTotal));
+		lblCostPerPerson.setText("Cost per person (" + numberOfPeople + " people):");
+		txtCostPerPerson.setText(money.format(costPerPerson));
 	}
 
 	private void getValuesFromBundle(Intent intent) {
-		totalBill = intent.getFloatExtra(EXTRA_FINAL_TOTAL_KEY, 0f);
+		totalBill = intent.getFloatExtra(EXTRA_TOTAL_KEY, 0f);
 		tipAmount = intent.getFloatExtra(EXTRA_TIP_AMOUNT_KEY, 0f);
 		tipPercentage = intent.getFloatExtra(EXTRA_TIP_PERCENTAGE_KEY, 0f);
 		finalTotal = intent.getFloatExtra(EXTRA_FINAL_TOTAL_KEY, 0f);
