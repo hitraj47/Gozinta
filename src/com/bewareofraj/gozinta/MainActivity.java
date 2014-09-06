@@ -3,17 +3,17 @@ package com.bewareofraj.gozinta;
 import android.annotation.TargetApi;
 import android.app.ActionBar;
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
-import com.bewareofraj.gozinta.util.SystemUiHider;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
 
-/**
- * An example full-screen activity that shows and hides the system UI (i.e.
- * status bar and navigation/system bar) with user interaction.
- * 
- * @see SystemUiHider
- */
 public class MainActivity extends Activity {
+	
+	private Button btnStart;
+	
 	@TargetApi(Build.VERSION_CODES.HONEYCOMB)
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +26,17 @@ public class MainActivity extends Activity {
 			ActionBar actionBar = getActionBar();
 			actionBar.hide();
 		}
+		
+		// initialize the start button and set the onclicklistener
+		btnStart = (Button) findViewById(R.id.btnStart);
+		btnStart.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				Intent inputScreenIntent = new Intent(MainActivity.this, InputActivity.class);
+				startActivity(inputScreenIntent);
+			}
+		});
 	}
 
 }

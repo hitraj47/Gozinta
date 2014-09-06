@@ -36,4 +36,15 @@
         android:text="@string/str_btn_start"
         android:textColor="#000" />
 
+    <TextView
+        android:id="@+id/txtAuthor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="36dp"
+        android:text="@string/str_author"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#000" />
+
 </RelativeLayout>
