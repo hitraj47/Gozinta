@@ -12,11 +12,14 @@
     <string name="str_lbl_num_of_people">Number of people:</string>
     <string name="str_txt_num_people">Enter number</string>
     <string name="str_lbl_quality">Rate the quality of service:</string>
+
     <string-array name="arr_str_ratings">
-        <item android:id="@+id/rating_excellent" android:layout_height="wrap_content" android:layout_width="wrap_content">Excellent</item>
-        <item android:id="@+id/rating_average" android:layout_height="wrap_content" android:layout_width="wrap_content">Average</item>
-        <item android:id="@+id/rating_poor" android:layout_height="wrap_content" android:layout_width="wrap_content">Poor</item>
+        <item android:id="@+id/rating_excellent" android:layout_width="wrap_content" android:layout_height="wrap_content">Excellent</item>
+        <item android:id="@+id/rating_average" android:layout_width="wrap_content" android:layout_height="wrap_content">Average</item>
+        <item android:id="@+id/rating_poor" android:layout_width="wrap_content" android:layout_height="wrap_content">Poor</item>
     </string-array>
-        <string name="str_btn_calculate">Calculate</string>
+
+    <string name="str_btn_calculate">Calculate</string>
+    <string name="title_activity_result">ResultActivity</string>
 
 </resources>
