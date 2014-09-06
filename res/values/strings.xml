@@ -1,13 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
 
     <string name="app_name">Gozinta</string>
-    <string name="dummy_button">Dummy Button</string>
-    <string name="dummy_content">DUMMY\nCONTENT</string>
     <string name="str_main_screen_image">People getting served food by a waiter</string>
     <string name="str_btn_start">Start</string>
     <string name="str_author">Created by Raj Ramsaroop</string>
     <string name="title_activity_input">InputActivity</string>
     <string name="hello_world">Hello world!</string>
+    <string name="str_bill">Restaurant Bill</string>
+    <string name="str_txt_bill">Enter dollar amount</string>
+    <string name="str_lbl_num_of_people">Number of people:</string>
+    <string name="str_txt_num_people">Enter number</string>
+    <string name="str_lbl_quality">Rate the quality of service:</string>
+    <string-array name="arr_str_ratings">
+        <item android:id="@+id/rating_excellent" android:layout_height="wrap_content" android:layout_width="wrap_content">Excellent</item>
+        <item android:id="@+id/rating_average" android:layout_height="wrap_content" android:layout_width="wrap_content">Average</item>
+        <item android:id="@+id/rating_poor" android:layout_height="wrap_content" android:layout_width="wrap_content">Poor</item>
+    </string-array>
+        <string name="str_btn_calculate">Calculate</string>
 
 </resources>

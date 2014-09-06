@@ -1,7 +1,75 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_marginBottom="10dp"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:layout_marginTop="10dp"
+    android:orientation="vertical"
     tools:context="${packageName}.${activityClass}" >
 
-</RelativeLayout>
+    <TextView
+        android:id="@+id/lblBill"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/str_bill"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <EditText
+        android:id="@+id/txtBill"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/str_txt_bill"
+        android:inputType="numberDecimal" >
+
+        <requestFocus />
+    </EditText>
+
+    <android.support.v7.widget.Space
+        android:id="@+id/space1"
+        android:layout_width="1dp"
+        android:layout_height="30dp" />
+
+    <TextView
+        android:id="@+id/lblNumberOfPeople"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/str_lbl_num_of_people"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <EditText
+        android:id="@+id/txtNumberOfPeople"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/str_txt_num_people"
+        android:inputType="number" />
+    
+    <android.support.v7.widget.Space
+        android:id="@+id/space2"
+        android:layout_width="1dp"
+        android:layout_height="30dp" />
+
+    <TextView
+        android:id="@+id/lblQuality"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/str_lbl_quality"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <Spinner
+        android:id="@+id/spnQuality"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:entries="@array/arr_str_ratings" />
+
+    <Button
+        android:id="@+id/btnCalculate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:text="@string/str_btn_calculate" />
+
+</LinearLayout>

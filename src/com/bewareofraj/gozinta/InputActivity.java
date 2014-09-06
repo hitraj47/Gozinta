@@ -2,8 +2,6 @@ package com.bewareofraj.gozinta;
 
 import android.app.Activity;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
 
 public class InputActivity extends Activity {
 
@@ -12,4 +10,5 @@ public class InputActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_input);
 	}
+	
 }
