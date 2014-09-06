@@ -21,5 +21,14 @@
 
     <string name="str_btn_calculate">Calculate</string>
     <string name="title_activity_result">ResultActivity</string>
+    <string name="str_lbl_total">Total</string>
+    <string name="str_plus">Plus</string>
+    <string name="str_hr">Horizontal Rule</string>
+    <string name="str_total_placeholder">$70</string>
+    <string name="str_tip_placeholder">$12.60</string>
+    <string name="str_lbl_tip_placeholder">Tip Amount (18%)</string>
+    <string name="str_final_total_placeholder">Final total: $82.60</string>
+    <string name="str_cost_per_person_label_placeholder">Cost per person (4 people):</string>
+    <string name="str_cost_per_person_placeholder">$20.65</string>
 
 </resources>
