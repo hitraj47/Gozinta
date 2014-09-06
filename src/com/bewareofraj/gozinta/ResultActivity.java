@@ -23,5 +23,17 @@ public class ResultActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_result);
+		
+		getValuesFromBundle(savedInstanceState);
+		
+	}
+
+	private void getValuesFromBundle(Bundle savedInstanceState) {
+		totalBill = savedInstanceState.getFloat(EXTRA_TOTAL_KEY);
+		tipAmount = savedInstanceState.getFloat(EXTRA_TIP_AMOUNT_KEY);
+		tipPercentage = savedInstanceState.getFloat(EXTRA_TIP_PERCENTAGE_KEY);
+		finalTotal = savedInstanceState.getFloat(EXTRA_FINAL_TOTAL_KEY);
+		numberOfPeople = savedInstanceState.getInt(EXTRA_NUMBER_OF_PEOPLE_KEY);
+		costPerPerson = savedInstanceState.getFloat(EXTRA_COST_PER_PERSON_KEY);
 	}
 }
