@@ -30,5 +30,6 @@
     <string name="str_final_total_placeholder">Final total: $82.60</string>
     <string name="str_cost_per_person_label_placeholder">Cost per person (4 people):</string>
     <string name="str_cost_per_person_placeholder">$20.65</string>
+    <string name="str_quality_placeholder">Service quality:</string>
 
 </resources>

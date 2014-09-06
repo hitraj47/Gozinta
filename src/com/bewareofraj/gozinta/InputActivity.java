@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Spinner;
 import android.widget.Toast;
 
 public class InputActivity extends Activity {
@@ -14,6 +15,7 @@ public class InputActivity extends Activity {
 	private EditText txtAmount;
 	private EditText txtPeople;
 	private Button btnCalculate;
+	private Spinner spnQuality;
 
 	private final float TIP_PERCENT = 0.18f;
 
@@ -29,6 +31,7 @@ public class InputActivity extends Activity {
 		// initialize UI
 		txtAmount = (EditText) findViewById(R.id.txtBill);
 		txtPeople = (EditText) findViewById(R.id.txtNumberOfPeople);
+		spnQuality = (Spinner) findViewById(R.id.spnQuality);
 		btnCalculate = (Button) findViewById(R.id.btnCalculate);
 		btnCalculate.setOnClickListener(new OnClickListener() {
 
@@ -51,6 +54,7 @@ public class InputActivity extends Activity {
 		float tipAmount = billTotal * TIP_PERCENT;
 		float totalWithTip = billTotal + tipAmount;
 		float costPerPerson = totalWithTip / numberOfPeople;
+		String quality = spnQuality.getSelectedItem().toString();
 
 		Intent resultIntent = new Intent(InputActivity.this,
 				ResultActivity.class);
@@ -64,6 +68,7 @@ public class InputActivity extends Activity {
 				costPerPerson);
 		resultIntent.putExtra(ResultActivity.EXTRA_TIP_PERCENTAGE_KEY,
 				TIP_PERCENT);
+		resultIntent.putExtra(ResultActivity.EXTRA_QUALITY_KEY, quality);
 
 		startActivity(resultIntent);
 	}

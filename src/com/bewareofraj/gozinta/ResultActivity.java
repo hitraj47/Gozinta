@@ -15,6 +15,7 @@ public class ResultActivity extends Activity {
 	public static final String EXTRA_FINAL_TOTAL_KEY = "FINAL_TOTAL";
 	public static final String EXTRA_NUMBER_OF_PEOPLE_KEY = "NUMBER_OF_PEOPLE";
 	public static final String EXTRA_COST_PER_PERSON_KEY = "COST_PER_PERSON";
+	public static final String EXTRA_QUALITY_KEY = "QUALITY";
 	
 	private float totalBill;
 	private float tipAmount;
@@ -22,6 +23,7 @@ public class ResultActivity extends Activity {
 	private float finalTotal;
 	private int numberOfPeople;
 	private float costPerPerson;
+	private String quality;
 	
 	private TextView txtBillTotal;
 	private TextView txtTipAmount;
@@ -29,6 +31,7 @@ public class ResultActivity extends Activity {
 	private TextView txtFinalTotal;
 	private TextView lblCostPerPerson;
 	private TextView txtCostPerPerson;
+	private TextView txtQuality;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -50,6 +53,7 @@ public class ResultActivity extends Activity {
 		txtFinalTotal = (TextView) findViewById(R.id.txtFinalTotal);
 		lblCostPerPerson = (TextView) findViewById(R.id.lblCostPerPerson);
 		txtCostPerPerson = (TextView) findViewById(R.id.txtCostPerPerson);
+		txtQuality = (TextView) findViewById(R.id.txtQuality);
 	}
 
 	private void setTextViewValues() {
@@ -62,6 +66,7 @@ public class ResultActivity extends Activity {
 		txtFinalTotal.setText("Final total: " + money.format(finalTotal));
 		lblCostPerPerson.setText("Cost per person (" + numberOfPeople + " people):");
 		txtCostPerPerson.setText(money.format(costPerPerson));
+		txtQuality.setText("Service quality: " + quality);
 	}
 
 	private void getValuesFromBundle(Intent intent) {
@@ -71,5 +76,6 @@ public class ResultActivity extends Activity {
 		finalTotal = intent.getFloatExtra(EXTRA_FINAL_TOTAL_KEY, 0f);
 		numberOfPeople = intent.getIntExtra(EXTRA_NUMBER_OF_PEOPLE_KEY, 0);
 		costPerPerson = intent.getFloatExtra(EXTRA_COST_PER_PERSON_KEY, 0f);
+		quality = intent.getStringExtra(EXTRA_QUALITY_KEY);
 	}
 }

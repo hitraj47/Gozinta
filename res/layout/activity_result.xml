@@ -92,4 +92,14 @@
         android:text="@string/str_cost_per_person_placeholder"
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
+    <TextView
+        android:id="@+id/txtQuality"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/txtCostPerPerson"
+        android:layout_marginLeft="10dp"
+        android:text="@string/str_quality_placeholder"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
 </RelativeLayout>
