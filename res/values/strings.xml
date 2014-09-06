@@ -4,5 +4,7 @@
     <string name="app_name">Gozinta</string>
     <string name="dummy_button">Dummy Button</string>
     <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="str_main_screen_image">People getting served food by a waiter</string>
+    <string name="str_btn_start">Start</string>
 
 </resources>
