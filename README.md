@@ -11,4 +11,7 @@ See 'master' branch in GitHub.
 
 # Notes and Instructions
 
+Screenflow (click for larger image): 
+![Screenflow](https://dl.dropboxusercontent.com/u/58121969/screens.PNG)
+
 # References
