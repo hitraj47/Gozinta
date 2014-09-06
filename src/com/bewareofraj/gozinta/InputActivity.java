@@ -1,8 +1,8 @@
 package com.bewareofraj.gozinta;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
@@ -14,7 +14,7 @@ public class InputActivity extends Activity {
 	private EditText txtPeople;
 	private Button btnCalculate;
 	
-	private final static float TIP_PERCENT = 0.18f;
+	private final float TIP_PERCENT = 0.18f;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -40,7 +40,19 @@ public class InputActivity extends Activity {
 	
 	private void calculate() {
 		float billTotal = Float.parseFloat(txtAmount.getText().toString());
-		Log.v("goz", "Bill total: " + Float.toString(billTotal));
+		int numberOfPeople = Integer.parseInt(txtPeople.getText().toString());
+		
+		float tipAmount = billTotal * TIP_PERCENT;
+		float totalWithTip = billTotal + tipAmount;
+		float costPerPerson = totalWithTip / numberOfPeople;
+		
+		Intent resultIntent = new Intent(InputActivity.this, ResultActivity.class);
+		resultIntent.putExtra(ResultActivity.EXTRA_TOTAL_KEY, billTotal);
+		resultIntent.putExtra(ResultActivity.EXTRA_NUMBER_OF_PEOPLE_KEY, numberOfPeople);
+		resultIntent.putExtra(ResultActivity.EXTRA_TIP_AMOUNT_KEY, tipAmount);
+		resultIntent.putExtra(ResultActivity.EXTRA_FINAL_TOTAL_KEY, totalWithTip);
+		resultIntent.putExtra(ResultActivity.EXTRA_COST_PER_PERSON_KEY, costPerPerson);
+		
 	}
 
 }
