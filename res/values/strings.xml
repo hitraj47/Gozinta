@@ -31,5 +31,8 @@
     <string name="str_cost_per_person_label_placeholder">Cost per person (4 people):</string>
     <string name="str_cost_per_person_placeholder">$20.65</string>
     <string name="str_quality_placeholder">Service quality:</string>
+    <string name="str_mnu_input_japan">I\'m in Japan&#8230;</string>
+    <string name="title_activity_japan">JapanActivity</string>
+    <string name="str_meme_desc">Batman slapping Robin meme</string>
 
 </resources>
